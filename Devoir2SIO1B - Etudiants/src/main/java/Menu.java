@@ -117,28 +117,19 @@ public class Menu
                     break;
                 case 2:
 
-                    int sommeProduit=0;
-
-                    for (int i=0; i<3; i++)
+                    for (int i=0; i<tableau1Exo2.length; i++)
                     {
-                        sommeProduit=0;
-                        for (int j = 0; j < 3; j++)
+                        for (int j=0; j<tableau1Exo2.length; j++)
                         {
-                            sommeProduit=sommeProduit+tableau1Exo2[i][j]*tableau2Exo2[i][j];
-                            tableauProduitExo2[i][j]=sommeProduit;
-                        }
-                        System.out.println();
-
-                    }
-
-
-                    for (int k=0; k<tableauProduitExo2.length; k++)
-                    {
-                        for (int g = 0; g < tableauProduitExo2.length; g++) {
-                            System.out.print(tableauProduitExo2[k][g] + "\t");
+                            for (int k=0; k<tableau1Exo2.length; k++)
+                            {
+                                tableauProduitExo2[i][j]=tableauProduitExo2[i][j]+tableau1Exo2[i][k]*tableau2Exo2[k][j] ;
+                            }
+                            System.out.print(tableauProduitExo2[i][j]+"\t");
                         }
                         System.out.println();
                     }
+
 
                     break;
             }
